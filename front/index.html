@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>Culichi Battles</title>
+        <link rel="stylesheet" href="./style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section id="inicio">
+            <h1 class="titulo">🤘🏽Jueves de Free🔥</h1>
+
+            <h2 class="subtitulo">Elige a tu raper</h2>
+
+            <div id="contenedorTarjetas" class="tarjetas">
+            </div>
+
+            <button id="boton-rapero">Aceptar</button>
+        </section>
+
+        <section id="ver-mapa">
+            <h2 class="subtitulo">Recorre la Rosales</h2>
+            <canvas id="mapa"></canvas>
+            <div id="joyStick">
+                <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()" ontouchend="detenerMovimiento()" ontouchstart="moverArriba()" class="controlMapa" id="arriba">Arriba</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()" ontouchend="detenerMovimiento()" ontouchstart="moverIzquierda()" class="controlMapa" id="izquierda">Izquierda</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()" ontouchend="detenerMovimiento()" ontouchstart="moverDerecha()" class="controlMapa" id="derecha">Derecha</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()" ontouchend="detenerMovimiento()" ontouchstart="moverAbajo()" class="controlMapa" id="abajo">Abajo</button>
+            </div>
+            
+        </section>
+
+        <section id="seleccionar-ataque">
+            
+            <h1 class="titulo">🤘🏽Jueves de Free🔥</h1>
+            <h2 class="subtitulo">Has 5 patrones:</h2>
+
+            <div id="contenedorAtaques" class="ataques">                
+            </div>
+
+            <div id="mensajes">
+                <p id="resultado">Are you ready?</p>
+
+                <section id="reinicia">
+                    <button id="boton-reiniciar">Try Again</button>
+                </section>
+            </div>
+            <div class="encuentros">
+                <div>
+                    <p id="vidas-jugador">0</p>
+                    <div id="gameplay-jugador">
+                        <p id="aka"></p>
+                    </div>           
+                    <div id="ataque-del-jugador"></div>
+                </div>
+                <div>
+                    <p id="vidas-enemigo">0</p>
+                    <div id="gameplay-enemigo">
+                        <p id="aka-bitch"></p>
+                    </div>
+                    <div id="ataque-del-enemigo"></div>
+                </div>
+            </div>           
+        </section>
+        <script src="./JS/Mokepon.js"></script>
+    </body>
+</html>

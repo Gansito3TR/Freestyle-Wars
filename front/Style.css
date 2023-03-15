@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik+Vinyl&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background-image: url(./assets/pizza.gif);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+input {
+    display: none;
+    height: 50px;
+}
+
+input:checked + label {
+    opacity: 0.8;
+}
+input:hover + label {
+    opacity: 0.8;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    display: flex;
+    font-family: 'Cinzel', serif;
+    color: #FEFCF3;
+    width: 90%;
+    height: 50%;
+    font-size: 60px;
+    justify-content: center;
+}
+
+.subtitulo {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 40px;
+    color: #ebcf45;
+    margin: 15px;
+    /* animation: glow 1s ease-in-out infinite alternate; */
+}
+
+/* @-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+} */
+
+.tarjetas {
+    display: grid;
+    gap: 1rem;
+    width: 90%;
+    grid-auto-rows: 15rem;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 2fr));
+    color: #FEFCF3;
+}
+
+.ataques {
+    display: grid;
+    width: 90%;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 2fr));
+    grid-auto-rows: 4rem;
+    grid-auto-flow: dense;
+
+}
+
+.tarjetas img {
+        width: 7rem;
+}
+
+.selector-de-raper {
+    font-family: 'Permanent Marker', cursive;
+    width: 10rem;
+    height: 15rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    margin: 0.5rem;
+    border-radius: 14px;
+    border: 2px solid #FEFCF3;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+#boton-rapero {
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    background: #2B3467;
+    border: 3px solid #BAD7E9;
+    color: #FCFFE7;
+    margin-top: 30px;
+    font-family: 'Cinzel', serif;
+}
+
+#seleccionar-ataque {
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-de-ataque {
+    font-family: 'Cinzel', serif;
+    background: #2B3467;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    border: 3px solid #BAD7E9;
+    color: #FCFFE7;
+    margin: 10px;
+    padding: 10px   ;
+    box-sizing: border-box;
+}
+
+#mensajes {
+    width: 300px;
+    height: 90px;
+    margin: 10px;
+    background: #F5EBE0;
+    padding: 10px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#vidas-jugador, #vidas-enemigo {
+    font-size: 20px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#boton-reiniciar {
+    border: none;
+    background: #EB455F
+}
+
+.encuentros {
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 2fr));
+    text-align: center;
+    border: 5px solid #DBA39A;
+    margin: 10px;
+    background: #F5EBE0;
+}
+
+#ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ver-mapa button {
+    font-family: 'Cinzel', serif;
+    background: #2B3467;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    border: 3px solid #BAD7E9;
+    color: #FCFFE7;
+    box-sizing: border-box;
+}
+
+#joyStick {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+#arriba {
+    grid-column: 2/3;
+}
+#derecha {
+    grid-column: 3/4;
+    grid-row: 2/3
+}
+#izquierda {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+#abajo {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+#mapa {
+    border: 2px solid white
+}
+
+#joyStickCentro {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
